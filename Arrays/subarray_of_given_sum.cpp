@@ -12,7 +12,7 @@ deque<int> subarray_sum(int *arr, int n, int target) {
     res.push_back(0);
     while (sum != target && h < n) {
         if (sum > target) {
-            while (sum > target) {
+            while (sum > target && l <= h) {
                 sum -= arr[l++];
                 res.pop_front();
             }
