@@ -13,7 +13,7 @@ int kadane(int *arr, int n) {
         } else {
             cnt += arr[i];
         }
-        if (cnt > max) {
+        if (cnt >= max) {
             max = cnt;
             start = tmp;
             end = i;
