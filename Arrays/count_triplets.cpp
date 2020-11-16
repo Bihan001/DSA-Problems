@@ -5,7 +5,6 @@ using namespace std;
 // Sum of two numbers equals to a third number in the array
 
 // Time complexity: O(n^2)
-
 vector<vector<int>> count_triplets_hash(int *arr, int n) {
     vector<vector<int>> res;
     map<int, int> hash;
@@ -26,6 +25,7 @@ vector<vector<int>> count_triplets_hash(int *arr, int n) {
     return res;
 }
 
+// Time complexity: O(n^2)
 vector<vector<int>> count_triplets_sort(int *arr, int n) {
     vector<vector<int>> res;
     sort(arr, arr + n);
