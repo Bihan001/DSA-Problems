@@ -5,12 +5,21 @@ using namespace std;
 // Finding max contagious subarray sum
 
 int kadane(int *arr, int n) {
-    int max = INT_MIN, cnt = 0;
-    for (int i = 0; i < n; i++) {
-        cnt += arr[i];
-        if (cnt > max) max = cnt;
-        if (cnt < 0) cnt = 0;
+    int max = arr[0], cnt = arr[0], start = 0, end = 0, tmp = 0;
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > cnt + arr[i]) {
+            cnt = arr[i];
+            tmp = i;
+        } else {
+            cnt += arr[i];
+        }
+        if (cnt > max) {
+            max = cnt;
+            start = tmp;
+            end = i;
+        }
     }
+    cout << start << ' ' << end << endl;
     return max;
 }
 
