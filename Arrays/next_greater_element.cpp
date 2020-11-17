@@ -28,5 +28,10 @@ int main() {
     int n = sizeof(arr) / sizeof(arr[0]);
     vector<int> ans = nge(arr, n);
     for (auto x : ans) cout << x << " ";
+    cout << endl;
+    int arr1[] = {4, 5, 2, 25};
+    int n1 = sizeof(arr1) / sizeof(arr1[0]);
+    ans = nge(arr1, n1);
+    for (auto x : ans) cout << x << " ";
     return 0;
 }
