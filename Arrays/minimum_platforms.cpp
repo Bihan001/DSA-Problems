@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// Find minimum platforms required so that none of the trains at given intervals have to wait to reach the platform
+
 // Time complexity: O(n) | Space complexity: O(max_element(dep))
 int minimum_platforms_1(int *arr, int *dep, int n) {
     int m = *max_element(dep, dep + n);
