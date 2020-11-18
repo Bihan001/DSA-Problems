@@ -3,6 +3,7 @@
 using namespace std;
 
 // Sort an array which only contains values 0,1,2
+// Also called Dutch National Flag algorithm
 
 // Inclusive ranges after sorting:
 // arr[0 - (low-1)] - 0
