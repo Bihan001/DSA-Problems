@@ -3,6 +3,7 @@
 using namespace std;
 
 // Finding the Kth smallest element in an array
+// Finding Kth largest element is similar
 
 // TODO - Using quicksort
 
