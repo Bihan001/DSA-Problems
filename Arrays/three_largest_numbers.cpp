@@ -8,8 +8,8 @@ using namespace std;
 // Finding three largest numbers in an array
 
 // Time complexity: O(n) | Space complexity: O(1)
-vector<int> three_largest_numbers(vi arr) {
-    vector<int> res(3, INT_MIN);
+vi three_largest_numbers(vi arr) {
+    vi res(3, INT_MIN);
     for (int i = 0; i < arr.size(); i++) {
         if (arr[i] > res[2]) {
             int tmp = res[2];
@@ -28,8 +28,8 @@ vector<int> three_largest_numbers(vi arr) {
 
 // Can be used to find K largest numbers instead of only 3
 // Time complexity: O(nlogn) | Space complexity: O(n)
-vector<int> three_largest_numbers_1(vi arr) {
-    vector<int> res(3, INT_MIN);
+vi three_largest_numbers_1(vi arr) {
+    vi res(3, INT_MIN);
     priority_queue<int> pq;
     for (auto it : arr) pq.push(it);
     for (int i = 0; i < 3; i++) {
@@ -41,7 +41,7 @@ vector<int> three_largest_numbers_1(vi arr) {
 
 int main() {
     vi arr = {16, 17, 4, 3, 5, 2};
-    vector<int> ans = three_largest_numbers(arr);
+    vi ans = three_largest_numbers(arr);
     for (auto x : ans) cout << x << " ";
     cout << endl;
     ans = three_largest_numbers_1(arr);
