@@ -23,7 +23,7 @@ bool check(vi arr, int c, int mid) {
 int aggresive_cows(vi arr, int c) {
     sort(arr.begin(), arr.end());
     int ans = INT_MIN;
-    int low = 0, high = arr.size() - 1, mid;
+    int low = 0, high = arr[arr.size() - 1] - arr[0], mid;  // Low can be 0 as minimum as elements are not said to be unique, high is the maximum distance possible in sorted array i.e. last element - first element
     while (high - low > 1) {
         mid = (high + low) / 2;
         if (check(arr, c, mid)) {
