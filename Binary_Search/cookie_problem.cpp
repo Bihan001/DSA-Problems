@@ -5,6 +5,9 @@ using namespace std;
 #define vi vector<int>
 #define pb push_back
 
+// Given an array of present ingredients and another array of required ingredients to make a single cookie and some magic powder(int), we need to find the max number of cookies we can make from present ingredients and the magic powder.
+// If present ingredients are not enough then we can use single units magic powder to create single units of the missing inredient.
+
 bool check(vi present, vi req, int mp, int mid) {
     for (int i = 0; i < req.size(); i++) {
         if (mid * req[i] <= present[i]) continue;
@@ -14,6 +17,7 @@ bool check(vi present, vi req, int mp, int mid) {
     return true;
 }
 
+// Time complexity: O(nlogn) | Space complexity: O(1)
 int calc_cookies(vi present, vi req, int mp) {
     int low = 0, high = 100000000, mid;
     while (high - low > 1) {

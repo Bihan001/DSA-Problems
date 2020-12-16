@@ -18,6 +18,7 @@ using namespace std;
    then it must be present in the corresponding index of the element present there.
 */
 
+// Time complexity: O(logn) | Space complexity: O(1)
 int search_number(vi arr, int k) {
     int bkp = k;
     for (int i = 1; i < arr.size(); i += 2) {

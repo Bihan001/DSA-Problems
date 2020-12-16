@@ -20,6 +20,7 @@ bool check(string s, string sub, vi arr, int mid) {
     return false;
 }
 
+// Time complexity: O(nlogn) | Space complexity: O(1)
 int count_removals(string s, string sub, vi arr) {
     int low = 0, high = arr.size(), mid;
     while (high - low > 1) {
